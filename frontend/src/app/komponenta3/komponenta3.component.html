@@ -1,0 +1,23 @@
+<p>komponenta3 works!</p><br>
+
+@if(ispisatiPodatke){
+  <p>Ispiti za studenta {{poslednjIspit.student}}</p>
+  <table>
+    <tr>
+      <th>Sifra</th>
+      <th>Ocena</th>
+      <th>Datum</th>
+    </tr>
+    @for(i of ispiti; track i.sifra) {
+      <tr>
+        <td [class.red]="i.sifra == poslednjIspit.sifra">{{i.sifra}}</td>
+        <td [class.red]="i.sifra == poslednjIspit.sifra">{{i.ocena}}</td>
+        <td [class.red]="i.sifra == poslednjIspit.sifra">{{i.datum}}</td>
+      </tr>
+    }
+  </table>
+}
+@else {
+  <p>{{poruka}}</p>
+}
+<button (click)="nazad()">Nazad</button>

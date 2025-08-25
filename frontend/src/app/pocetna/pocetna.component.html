@@ -1,0 +1,23 @@
+<p>pocetna works!</p>
+<h1>Prva forma</h1>
+<br>
+<input type="text" placeholder="Unesite broj indeksa" [(ngModel)]="prvaFormaIndeks"><br>
+<button (click)="forma1()">Podaci o studentu</button><br>
+{{porukaPrvaForma}}
+<br>
+<hr>
+<h1>Druga forma</h1>
+<br>
+<input type="date" [(ngModel)]="drugaFormaDatumOd"><br>
+<input type="date" [(ngModel)]="drugaFormaDatumDo"><br>
+<button (click)="forma2()">Pretraga ispita</button><br>
+{{porukaDrugaForma}}
+<br>
+<hr>
+<h1>Treca forma</h1>
+<br>
+<input type="text" placeholder="Unesite broj indeksa" [(ngModel)]="ispit.student"><br>
+<input type="text" placeholder="Unesite sifru predmeta" [(ngModel)]="ispit.sifra"><br>
+<input type="number" placeholder="Unesite ocenu" [(ngModel)]="ispit.ocena"><br>
+<button (click)="forma3()">Unos ispita</button><br>
+{{porukaTrecaForma}}

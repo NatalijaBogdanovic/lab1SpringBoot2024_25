@@ -1,0 +1,10 @@
+<p>komponenta1 works!</p>
+@if(ispisatiPodatke){
+  <div>
+    <p>{{student.ime}} {{student.prezime}} - Prosek: {{prosekOcena.toPrecision(2)}}</p>
+  </div>
+
+}@else {
+  {{porukaGreske}}
+}
+<button (click)="nazad()">Nazad</button>

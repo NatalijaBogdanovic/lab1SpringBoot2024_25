@@ -1,0 +1,24 @@
+<p>komponenta2 works!</p>
+@if(vremenskiOpseg){
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Sifra</th>
+      <th>Ocena</th>
+      <th>Datum</th>
+    </tr>
+    @for(i of ispiti; track i.sifra){
+      <tr>
+        <td>{{i.student}}</td>
+        <td>{{i.sifra}}</td>
+        <td>  {{i.ocena}}</td>
+        <td>{{i.datum}}</td>
+      </tr>
+    }
+  </table>
+
+}@else {
+  Nema ispita u tom periodu
+}
+<button (click)="nazad()">Nazad</button>
+
